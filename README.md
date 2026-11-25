@@ -1,67 +1,85 @@
-# Nestora
+Nestora
 
-A multi-page real estate website with a light, airy glassmorphism design: frosted-glass panels, soft blur and calm colours. It is built to help visitors find a home quickly and to turn visitors into enquiries: quick-view pop-ups, one-tap saving, tour booking, payment estimates and a direct line to a named agent on every home.
+A real estate website I built to see how far plain HTML, CSS and JavaScript can go. It has seven pages, a light and airy "frosted glass" design, and features that actually work: search and filters, saved homes, a quick-view pop-up, tour booking, mortgage tools, and even a page where you can list your own home with your own photos.
 
-**[Live demo](https://venex2265.github.io/nestora/)**
+Live demo
 
-> Add a screenshot at `assets/screenshot.png` and link it here.
+Nestora home page
 
-## Pages
+Add a screenshot of the home page at assets/screenshot.png and it will show up here.
 
-| Page | What it does |
-| --- | --- |
-| `index.html` | Hero search, featured homes, cities, how it works, reviews, free valuation form |
-| `properties.html` | Buy / rent switch, search, type, bedrooms, price and sort filters |
-| `property.html?id=1` | Full home page: gallery, facts, features, neighbourhood scores, sticky tour booking |
-| `saved.html` | Every home you saved with the heart |
-| `calculator.html` | Mortgage calculator and "what can I afford?" estimate that links to matching homes |
-| `about.html` | Story, numbers and the agents |
-| `contact.html` | Contact form, details and FAQ |
-| `list.html` | Upload photos and publish your own listing on the site |
-| `enquiries.html` | Demo inbox: every form submission sent while in demo mode |
+Why I made it
 
-## Highlights
+Most portfolio projects are static pages that only look good. I wanted one that behaves like a real product: a visitor can find a home, save it, check what it would cost per month, book a tour, and get in touch with an agent, all without leaving the site.
 
-- **Quick view pop-up** on every card: gallery, price, payment estimate (change the down payment live), agent with call and WhatsApp buttons, and a tour form
-- Saved homes are remembered in the browser
-- Sticky Call / Book a tour bar on phones, floating "Talk to an agent" button on every page
-- Fully responsive, keyboard friendly and respects reduced-motion settings
-- No frameworks and no build step
-
-## Built with
-
-HTML5 · CSS3 (custom properties, Grid, Flexbox, `backdrop-filter`) · JavaScript (ES6, no libraries) · Manrope and Playfair Display from Google Fonts
-
-## Structure
-
-```
-*.html            one file per page (header and footer are added by js/layout.js)
-css/              variables · base · layout · components · pages · responsive
+What you can do
+Search and filter homes for sale or rent by city, type, bedrooms and price, and sort the results
+Quick view pop-up on every card: photo gallery, facts, a live monthly payment (change the down payment), and a tour form
+Full property pages with a gallery, key facts, features, neighbourhood scores and similar homes
+Save homes with the heart. They are remembered and collected on the Saved page
+Mortgage calculator and a "what can I afford?" tool that links to homes in your budget
+Book a tour, send a message or ask for a valuation. Forms really send: to your email through Formspree, or into a built-in demo inbox
+List a home: upload up to 4 photos, add details, and your listing appears in search with its own page
+Call or WhatsApp the agent straight from any home
+Works well on phones, tablets and desktops, with a sticky "Call / Book a tour" bar on mobile
+Pages
+Page	What it is
+index.html	Home: search, featured homes, cities, how it works, reviews, free valuation
+properties.html	All homes with filters and sorting
+property.html?id=1	One home in full detail
+saved.html	Homes you saved
+calculator.html	Mortgage and affordability tools
+list.html	Add your own home with photos
+about.html	The story and the agents
+contact.html	Contact form, details and FAQ
+enquiries.html	Demo inbox for everything sent through the forms
+Built with
+HTML5: semantic pages, <dialog> for the pop-up, <details> for the FAQ
+CSS3: custom properties, Grid, Flexbox, backdrop-filter for the glass effect, split into small files
+JavaScript (ES6): no frameworks, no libraries. localStorage for saved homes, listings and enquiries, and the Canvas API to shrink uploaded photos
+Manrope and Playfair Display from Google Fonts
+Project structure
+*.html              one file per page (the header and footer are added by js/layout.js)
+css/                variables · base · layout · components · pages · responsive
 js/
-  data.js         all content: homes, agents, reviews, FAQs
-  utils.js        helpers, mortgage formula, saved homes
-  art.js          built-in illustrations used until you add photos
-  cards.js        card and details HTML, quick-view pop-up
-  layout.js       shared header, footer, icons
-  main.js         shared behaviour (clicks, saving, forms, toast)
-  sections.js     fills the data-render blocks
-  properties.js · property.js · saved.js · calculator.js   page scripts
-assets/images/    put your photos here (see the README.txt inside)
-```
+  data.js           all the content: homes, agents, reviews, FAQs, settings
+  utils.js          helpers, mortgage formula, saved homes
+  art.js            built-in illustrations used until you add photos
+  cards.js          card and details HTML, the quick-view pop-up
+  layout.js         shared header, footer and icons
+  main.js           shared behaviour: clicks, saving, forms, toast
+  sections.js       fills the data-render blocks
+  properties.js · property.js · saved.js · calculator.js · list.js · enquiries.js
+assets/images/      put your photos here
+Run it
+bash
+git clone https://github.com/venex2265/nestora.git
+cd nestora
 
-## Forms that work
+Then open index.html in your browser, or use the VS Code Live Server extension.
 
-Every form (tour, contact, valuation) is sent for real. In **demo mode** (the default) submissions are saved in the visitor's browser and shown on `enquiries.html`. To receive real emails, create a free form at [formspree.io](https://formspree.io) and paste its URL into `FORM_ENDPOINT` in `js/data.js`.
+To put it online, push the repo to GitHub and turn on Settings → Pages (branch main, folder / (root)).
 
-## List a home
+Make it yours
+Change the homes, agents or reviews: edit js/data.js
+Use real photos for the built-in homes: follow assets/images/README.txt, then set USE_PHOTOS = true in js/data.js
+Get form messages by email: create a free form at formspree.io and paste its URL into FORM_ENDPOINT in js/data.js. Until then, messages are saved in the visitor's browser and shown on enquiries.html
+Good to know
 
-`list.html` lets anyone add a listing with up to 4 of their own photos (resized in the browser). It appears in search, on cards and on its own page. There is no server, so listings live in that browser only.
+There is no backend. Saved homes, listings you add and demo enquiries live in the browser (localStorage), so they stay on that device. All homes, agents and reviews in the demo are made up.
 
-## Add your own photos
+Ideas for later
+A real backend so listings and enquiries are shared between visitors
+A map view of the homes
+Compare two homes side by side
+Arabic and right-to-left support
+Built with Claude
 
-Read `assets/images/README.txt`. In short: save photos as `slug-1.jpg`, `slug-2.jpg`, `slug-3.jpg`, then set `USE_PHOTOS = true` in `js/data.js`. To add a home, copy an object in `js/data.js`.
+I made this project together with Claude, Anthropic's AI assistant. I described the idea, the look and the features, Claude wrote the code, and we improved it step by step. I reviewed, tested and customised the result, and I learned a lot from reading it.
 
-## Run it
+License
+
+Free to use and learn from. If it helps you, a star on the repo is always appreciated.
 
 Open `index.html` in a browser, or use the VS Code Live Server extension. To publish, turn on GitHub Pages (Settings → Pages → `main` branch, `/ (root)`).
 

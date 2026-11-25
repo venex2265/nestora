@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mortgage calculator – Nestora</title>
+  <meta name="description" content="Estimate your monthly mortgage payment and see how much home you can afford.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-hero container">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <span>Calculator</span></nav>
+      <h1>Know your numbers before you fall in love</h1>
+      <p>Two simple tools. Play with the sliders and see what a home could really cost you.</p>
+
+      <div class="tools">
+        <section class="tool glass" id="mortgage">
+          <h2>Monthly payment</h2>
+          <p class="muted">What would a home cost you each month?</p>
+          <label class="range">Home price <output id="priceOut"></output><input type="range" id="calcPrice" min="100000" max="3000000" step="10000" value="500000"></label>
+          <label class="range">Down payment <output id="downOut"></output><input type="range" id="calcDown" min="0" max="60" step="1" value="20"></label>
+          <label class="range">Interest rate <output id="rateOut"></output><input type="range" id="calcRate" min="1" max="10" step="0.1" value="6.5"></label>
+          <label class="range">Loan term <output id="yearsOut"></output><input type="range" id="calcYears" min="5" max="30" step="5" value="30"></label>
+          <div class="result glass-inner">
+            <span>Estimated monthly payment</span>
+            <strong id="monthly"></strong>
+            <div class="split" aria-hidden="true"><span id="splitLoan"></span><span id="splitInterest"></span></div>
+            <div class="legend"><span>● Loan</span><span style="color:#e58a63">● Interest over time</span></div>
+            <dl style="margin-top:18px">
+              <div><dt>Loan amount</dt><dd id="loan"></dd></div>
+              <div><dt>Total interest</dt><dd id="interest"></dd></div>
+              <div><dt>Total cost of the home</dt><dd id="totalCost"></dd></div>
+            </dl>
+            <small class="muted">Principal and interest only. Taxes and insurance are not included.</small>
+          </div>
+        </section>
+
+        <section class="tool glass" id="afford">
+          <h2>What can I afford?</h2>
+          <p class="muted">Based on the common lender rule: housing under 28% of your income.</p>
+          <label class="label" style="margin-bottom:18px">Yearly income before tax<input class="field" type="number" id="income" min="0" step="1000" value="85000"></label>
+          <label class="label" style="margin-bottom:18px">Monthly debts (car, cards, loans)<input class="field" type="number" id="debts" min="0" step="50" value="300"></label>
+          <label class="label" style="margin-bottom:24px">Savings for a down payment<input class="field" type="number" id="savings" min="0" step="1000" value="60000"></label>
+          <label class="range">Interest rate <output id="affRateOut"></output><input type="range" id="affRate" min="1" max="10" step="0.1" value="6.5"></label>
+          <div class="result glass-inner">
+            <span>You could look at homes up to</span>
+            <strong id="maxPrice"></strong>
+            <dl><div><dt>Comfortable monthly budget</dt><dd id="budget"></dd></div></dl>
+            <a class="btn btn--block" id="seeHomes" href="properties.html" style="margin-top:20px">See homes in your budget</a>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/art.js"></script>
+  <script src="js/cards.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/calculator.js"></script>
+</body>
+</html>

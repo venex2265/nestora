@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>List your home – Nestora</title>
+  <meta name="description" content="Add your home with photos and it appears on the site instantly.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-hero container">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <span>List a home</span></nav>
+      <h1>List your home with real photos.</h1>
+      <p>Upload your photos, add the details and your home appears on the site right away, in search, on the map of homes and with its own page.</p>
+
+      <form class="list-form glass form" id="listForm">
+        <h2>Photos</h2>
+        <label class="photo-drop" for="photos"><svg class="icon"><use href="#i-plus"/></svg>Choose up to 4 photos<small>JPG or PNG. They are resized in your browser.</small>
+          <input type="file" id="photos" accept="image/*" multiple></label>
+        <div class="previews" id="previews"></div>
+
+        <h2>The home</h2>
+        <input class="field" type="text" id="title" placeholder="Title, for example Bright 2-bedroom near the park" aria-label="Title" maxlength="70" required>
+        <div class="grid-3">
+          <select class="field" id="status" aria-label="Sale or rent"><option value="buy">For sale</option><option value="rent">For rent</option></select>
+          <select class="field" id="type" aria-label="Property type"><option>House</option><option>Apartment</option><option>Villa</option><option>Condo</option></select>
+          <input class="field" type="number" id="price" min="1" placeholder="Price in $ (per month if rent)" aria-label="Price" required>
+        </div>
+        <div class="grid-3">
+          <input class="field" type="number" id="beds" min="0" max="20" placeholder="Bedrooms" aria-label="Bedrooms" required>
+          <input class="field" type="number" id="baths" min="0" max="20" placeholder="Bathrooms" aria-label="Bathrooms" required>
+          <input class="field" type="number" id="sqft" min="50" placeholder="Size in sqft" aria-label="Size" required>
+        </div>
+        <div class="grid-3">
+          <input class="field" type="text" id="city" placeholder="City, State" aria-label="City" required>
+          <input class="field" type="text" id="hood" placeholder="Neighbourhood" aria-label="Neighbourhood">
+          <input class="field" type="number" id="year" min="1800" max="2100" placeholder="Year built" aria-label="Year built">
+        </div>
+        <input class="field" type="text" id="address" placeholder="Street address" aria-label="Address" required>
+        <textarea class="field" id="description" rows="4" placeholder="Describe the home: light, neighbourhood, what makes it special…" aria-label="Description" required></textarea>
+        <input class="field" type="text" id="features" placeholder="Features, separated by commas: Garden, Parking, Fireplace" aria-label="Features">
+
+        <h2>Your contact</h2>
+        <div class="grid-2">
+          <input class="field" type="text" id="ownerName" placeholder="Your name" aria-label="Your name" required>
+          <input class="field" type="tel" id="ownerPhone" placeholder="Phone number" aria-label="Phone number" required>
+        </div>
+        <button class="btn" type="submit">Publish my listing</button>
+        <p class="muted" style="font-size:14px">Demo note: this site has no server, so your listing is stored in this browser only. Visitors on other devices will not see it.</p>
+      </form>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/art.js"></script>
+  <script src="js/cards.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/list.js"></script>
+</body>
+</html>

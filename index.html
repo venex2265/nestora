@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nestora – Find a home that feels like yours</title>
+  <meta name="description" content="Browse verified homes for sale and rent, tour them online and get honest help from local experts.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <section class="hero container">
+      <div>
+        <span class="pill"><svg class="icon"><use href="#i-star"/></svg>4.9 rated by 1,200+ happy clients</span>
+        <h1>Your next home is closer than you think.</h1>
+        <p class="hero__lead">Browse verified homes for sale and rent, take a tour from your sofa, and get honest help from local experts who always pick up the phone.</p>
+
+        <form class="search glass" action="properties.html" method="get">
+          <div class="segmented" role="group" aria-label="Buy or rent">
+            <label><input type="radio" name="status" value="buy" checked><span>Buy</span></label>
+            <label><input type="radio" name="status" value="rent"><span>Rent</span></label>
+          </div>
+          <input class="field" type="search" name="q" placeholder="City or neighbourhood" aria-label="City or neighbourhood">
+          <select class="field" name="type" aria-label="Property type">
+            <option value="all">Any type</option><option>House</option><option>Apartment</option><option>Villa</option><option>Condo</option>
+          </select>
+          <button class="btn" type="submit"><svg class="icon"><use href="#i-search"/></svg>Search</button>
+        </form>
+        <p class="search__hint">Popular: <a href="properties.html?q=Miami">Miami</a> · <a href="properties.html?q=Austin">Austin</a> · <a href="properties.html?status=rent&q=New%20York">New York rentals</a> · <a href="calculator.html">What can I afford?</a></p>
+      </div>
+      <div class="hero__visual" data-render="hero-visual"></div>
+    </section>
+
+    <section class="container stats">
+      <div class="glass stat"><strong>2,400+</strong><span>Homes sold</span></div>
+      <div class="glass stat"><strong>18 days</strong><span>Average time to sell</span></div>
+      <div class="glass stat"><strong>4.9 / 5</strong><span>Client rating</span></div>
+      <div class="glass stat"><strong>120</strong><span>Local experts</span></div>
+    </section>
+
+    <section class="section container">
+      <div class="section__head section__head--row">
+        <div><span class="eyebrow">Hand-picked for you</span><h2>Homes people are loving right now</h2></div>
+        <a class="link-arrow" href="properties.html">See all properties <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="grid" data-render="featured"></div>
+    </section>
+
+    <section class="section container">
+      <div class="section__head"><span class="eyebrow">Explore</span><h2>Find your place in the city you love</h2><p>Tap a city to see what is available today.</p></div>
+      <div class="cities" data-render="cities"></div>
+    </section>
+
+    <section class="section container">
+      <div class="section__head"><span class="eyebrow">How it works</span><h2>From first look to new keys in three steps</h2><p>No jargon and no pressure. We stay with you the whole way.</p></div>
+      <div class="steps">
+        <article class="glass step"><h3>Search and save</h3><p>Filter by price, size and neighbourhood. Tap the heart on anything you like and compare your favourites in one place.</p></article>
+        <article class="glass step"><h3>Tour with confidence</h3><p>Book a visit or a video tour in under a minute. Your agent confirms within two hours and answers every question.</p></article>
+        <article class="glass step"><h3>Move in happy</h3><p>We help with offers, paperwork and mortgage options, so the only surprise on moving day is how smooth it was.</p></article>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section__head"><span class="eyebrow">Why Nestora</span><h2>Buying a home, made simpler</h2></div>
+      <div class="features">
+        <article class="glass feature"><span class="feature__icon"><svg class="icon"><use href="#i-shield"/></svg></span><h3>Verified listings</h3><p>Every photo, price and detail is checked by our team before it goes live.</p></article>
+        <article class="glass feature"><span class="feature__icon"><svg class="icon"><use href="#i-video"/></svg></span><h3>Video tours</h3><p>See a home properly before you travel. Visit in person only when you are sure.</p></article>
+        <article class="glass feature"><span class="feature__icon"><svg class="icon"><use href="#i-calc"/></svg></span><h3>Know your numbers</h3><p>Monthly payments and affordability tools on every home, so there are no surprises.</p></article>
+        <article class="glass feature"><span class="feature__icon"><svg class="icon"><use href="#i-key"/></svg></span><h3>Real people</h3><p>One named agent from first message to final signature, reachable by phone or WhatsApp.</p></article>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section__head"><span class="eyebrow">Kind words</span><h2>People who found their home with us</h2></div>
+      <div class="quotes" data-render="testimonials"></div>
+    </section>
+
+    <section class="section container">
+      <div class="cta glass">
+        <div>
+          <span class="eyebrow">Thinking of selling?</span>
+          <h2>Find out what your home is worth, free.</h2>
+          <p>Tell us where you live. A local expert will send an honest valuation within one working day.</p>
+          <ul class="cta__ticks">
+            <li><svg class="icon"><use href="#i-check"/></svg>No cost and no obligation</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Based on real recent sales nearby</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Reply within one working day</li>
+          </ul>
+        </div>
+        <form class="form glass-inner" style="padding:28px" data-kind="Valuation request" data-toast="Thank you! A local expert will send your valuation within one working day.">
+          <input class="field" type="text" placeholder="Home address" aria-label="Home address" required>
+          <input class="field" type="email" placeholder="Email address" aria-label="Email address" required>
+          <button class="btn btn--block" type="submit">Get my free valuation</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/art.js"></script>
+  <script src="js/cards.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/sections.js"></script>
+</body>
+</html>

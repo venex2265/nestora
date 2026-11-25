@@ -1,0 +1,26 @@
+/* Design tokens. A light, airy palette: soft sky tones, white glass and a warm coral call-to-action. */
+:root {
+  --font-body: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-title: "Playfair Display", Georgia, serif;
+
+  --bg: #eef4fc;
+  --text: #10203f;
+  --muted: #5b6b88;
+  --line: rgba(16, 32, 63, 0.1);
+
+  --primary: #1d4ed8;
+  --accent: #ff6b4a;
+  --mint: #0ea5a4;
+
+  --glass-bg: rgba(255, 255, 255, 0.58);
+  --glass-strong: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.9);
+  --glass-blur: blur(22px) saturate(170%);
+
+  --radius: 26px;
+  --radius-sm: 16px;
+  --shadow: 0 24px 60px rgba(16, 32, 63, 0.12);
+  --shadow-sm: 0 8px 24px rgba(16, 32, 63, 0.08);
+
+  --section-space: 120px;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact – Nestora</title>
+  <meta name="description" content="Talk to a local expert. We reply within one working day.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-hero container">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <span>Contact</span></nav>
+      <h1>Let’s find you a home.</h1>
+      <p>Tell us a little about what you need. A real person replies within one working day, often within two hours.</p>
+
+      <div class="contact">
+        <form class="contact__form glass form" data-kind="Contact message" data-toast="Thanks! An agent will reply within one working day.">
+          <h2>Send us a message</h2>
+          <p class="muted">No spam and no pressure.</p>
+          <div class="grid-2">
+            <input class="field" type="text" placeholder="Your name" aria-label="Your name" required>
+            <input class="field" type="tel" placeholder="Phone (optional)" aria-label="Phone">
+          </div>
+          <input class="field" type="email" placeholder="Email address" aria-label="Email address" required>
+          <select class="field" aria-label="I am interested in"><option>I want to buy</option><option>I want to rent</option><option>I want to sell</option><option>Something else</option></select>
+          <textarea class="field" rows="5" placeholder="What kind of home are you after? Budget, city, must-haves…" aria-label="Message" required></textarea>
+          <button class="btn" type="submit">Send message</button>
+        </form>
+
+        <div class="info">
+          <div class="glass info__item"><span class="feature__icon"><svg class="icon"><use href="#i-phone"/></svg></span><div><strong>Call us</strong><small>+1 (555) 010-2100 · Mon to Sat, 9am to 7pm</small></div></div>
+          <div class="glass info__item"><span class="feature__icon"><svg class="icon"><use href="#i-mail"/></svg></span><div><strong>Email</strong><small>hello@nestora.example</small></div></div>
+          <div class="glass info__item"><span class="feature__icon"><svg class="icon"><use href="#i-pin"/></svg></span><div><strong>Visit</strong><small>200 Market Street, Austin, TX</small></div></div>
+          <div class="glass info__item"><span class="feature__icon"><svg class="icon"><use href="#i-chat"/></svg></span><div><strong>Reply time</strong><small>Usually within 2 hours</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="faq">
+      <div class="section__head"><span class="eyebrow">Questions</span><h2>Things people often ask</h2></div>
+      <div class="faq" data-render="faq"></div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/art.js"></script>
+  <script src="js/cards.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/sections.js"></script>
+</body>
+</html>
